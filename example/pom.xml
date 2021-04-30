@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>org.opennms.browsermob</groupId>
+    <artifactId>browsermob-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.opennms.browsermob</groupId>
+  <artifactId>browsermob-example</artifactId>
+  <packaging>bundle</packaging>
+  <name>OpenNMS :: BrowserMob :: Example</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Karaf-Commands>*</Karaf-Commands>
+                        <!-- Nothing to export -->
+                        <Export-Package></Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.opennms.browsermob</groupId>
+            <artifactId>browsermob-osgi</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>

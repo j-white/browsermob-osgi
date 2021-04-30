@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features name="openmms-browsermob-features" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
+
+    <feature name="browsermob-osgi" description="browsermob" version="${project.version}">
+        <feature dependency="true">aries-blueprint</feature>
+        <bundle dependency="true">mvn:org.opennms.browsermob/browsermob-osgi/${project.version}</bundle>
+        <bundle dependency="true">mvn:org.opennms.browsermob/browsermob-example/${project.version}</bundle>
+    </feature>
+
+</features>
